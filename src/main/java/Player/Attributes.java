@@ -1,5 +1,7 @@
 package Player;
 
+import java.util.Arrays;
+
 public class Attributes {
     protected enum attribute{
         strength,
@@ -7,24 +9,44 @@ public class Attributes {
         constitution,
         intelligence,
         charisma,
-        wisdom
+        wisdom;
+
+        private int value;
+
+        public int getValue() {
+            return value;
+        }
     }
     protected int[] attrubutes;
+    public int[] getAttrubutes(){
+        return attrubutes;
+    }
+
+    protected int[] modifiers;
+    public int[] getModifiers() {
+        return modifiers;
+    }
 
     public Attributes(int[] attributes){
         if (attributes.length != attribute.values().length){
             throw new IllegalArgumentException(String.format("There must be {0} attributes given", attribute.values().length));
         }
         this.attrubutes = attributes;
+        initModifiers();
     }
 
-    public int[] getModifiers(){
-        int[] modifiers = new int[attrubutes.length];
-
-        for (int i = 0; i < attrubutes.length; i++) {
-            modifiers[i] = Math.floorDiv((attrubutes[i] - 10), 2);
+    private void initModifiers(){
+        modifiers = new int[attrubutes.length];
+        for (attribute a: attribute.values()) {
+            modifiers[a.ordinal()] = Math.floorDiv((attrubutes[a.ordinal()] - 10), 2);
         }
+    }
 
-        return modifiers;
+    @Override
+    public String toString() {
+        return "Attributes{" +
+                "attrubutes=" + Arrays.toString(attrubutes) +
+                ", modifiers=" + Arrays.toString(modifiers) +
+                '}';
     }
 }
