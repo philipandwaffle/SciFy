@@ -35,12 +35,20 @@ public class Format {
             max = curMax > max ? curMax : max;
         }
 
-
+        int finalMax = max;
+        data.stream().map((col) -> Arrays.stream(col).map((item) -> padtext(item, finalMax + 6)));
 
         return res;
     }
 
-    private static String centreText(String ){
+    private static String padtext(String text, int length){
+        if (text.length() >= length){
+            throw new IllegalArgumentException("the length needs to be greater than the length of the text");
+        }
+        int padLength = length - text.length();
 
+        String pad = new String(new char[padLength]).replace("\0", " ");
+        String res = text + pad;
+        return text + pad;
     }
 }

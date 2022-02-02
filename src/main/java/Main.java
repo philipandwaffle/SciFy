@@ -2,10 +2,20 @@ import Player.*;
 import Helper.*;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        playerTest();
+        //playerTest();
+        formatTest();
+    }
+
+    private static void formatTest(){
+        String[] col1 = new String[]{"a1", "b1", "c1"};
+        String[] col2 = new String[]{"a2", "b2", "c2"};
+        String[] col3 = new String[]{"a3", "b3", "c3"};
+        String s = Format.toDisplayTable(Arrays.asList(col1, col2, col3));
+        System.out.println(s);
     }
 
     private static void menuTest(){
