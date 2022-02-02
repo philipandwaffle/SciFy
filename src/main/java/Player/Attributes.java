@@ -44,9 +44,6 @@ public class Attributes {
 
     @Override
     public String toString() {
-        return "Attributes{" +
-                "attrubutes=" + Arrays.toString(attrubutes) +
-                ", modifiers=" + Arrays.toString(modifiers) +
-                '}';
+        
     }
 }

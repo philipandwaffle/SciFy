@@ -9,5 +9,8 @@
         <module name="SciFy" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SciFy" target="16" />
+    </bytecodeTargetLevel>
   </component>
 </project>
