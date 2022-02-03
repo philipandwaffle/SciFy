@@ -1,8 +1,11 @@
 import Player.*;
 import Helper.*;
 
+
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,7 +18,7 @@ public class Main {
         String[] col2 = new String[]{"a2", "b2", "c2"};
         String[] col3 = new String[]{"a3", "b3", "c3"};
         String s = Format.toDisplayTable(Arrays.asList(col1, col2, col3));
-        System.out.println(s);
+
     }
 
     private static void menuTest(){

@@ -36,12 +36,12 @@ public class Format {
         }
 
         int finalMax = max;
-        data.stream().map((col) -> Arrays.stream(col).map((item) -> padtext(item, finalMax + 6)));
+
 
         return res;
     }
 
-    private static String padtext(String text, int length){
+    public static String padtext(String text, int length){
         if (text.length() >= length){
             throw new IllegalArgumentException("the length needs to be greater than the length of the text");
         }
