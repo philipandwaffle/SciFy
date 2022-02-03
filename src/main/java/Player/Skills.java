@@ -1,9 +1,12 @@
 package Player;
 
+import Helper.Format;
+
+import java.text.Normalizer;
 import java.util.Arrays;
 
 public class Skills extends Attributes {
-    protected enum skill{
+    public enum skill{
         //strength
         athletics,
 
@@ -43,20 +46,22 @@ public class Skills extends Attributes {
         return skills;
     }
 
-    public Skills(int[] attributes) {
+    public Skills(int[] attributes, int profBonus, skill[] skillProf) {
         super(attributes);
         skills = new int[skill.values().length];
-        initSkills();
+        initSkills(skillProf, profBonus);
     }
 
-    private void initSkills(){
+    private void initSkills(skill[] skillProf, int profBonus){
         for (attribute a: attribute.values()) {
             skill[] aSkill = getSkillIndex(a);
             for (skill s: aSkill) {
-                System.out.println("atrubute value" + a.ordinal());
-                System.out.println("skill value" + s.ordinal());
-                skills[s.ordinal()] = Math.floorDiv(attrubutes[a.ordinal()]-10, 2);
+                skills[s.ordinal()] = (attributes[a.ordinal()]-10 / 2);
             }
+        }
+
+        for (skill s: skillProf) {
+            skills[s.ordinal()] += profBonus;
         }
     }
 
@@ -80,9 +85,11 @@ public class Skills extends Attributes {
     @Override
     public String toString() {
         String s = super.toString();
-        s += "Skills{" +
-                "skills=" + Arrays.toString(skills) +
-                '}';
+        s += "\n";
+        s += Format.toDisplayTable(Arrays.asList(
+                Format.toStringArray(skill.class),
+                Format.toStringArray(skills)
+        ));
         return s;
     }
 }

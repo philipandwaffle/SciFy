@@ -5,16 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e32c651d-b5f0-47e4-abf8-575ce22c9c72" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Player/Inventory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Helper/Format.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Helper/Format.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player/Attributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player/Attributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Player/Skills.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player/Skills.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Helper/Format.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Helper/Format.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Player/Attributes$attribute.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player/Attributes$attribute.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Player/Attributes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player/Attributes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Player/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Player/Skills$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player/Skills$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Player/Skills$skill.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player/Skills$skill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Player/Skills.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Player/Skills.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,6 +55,9 @@
     </option>
   </component>
   <component name="ProjectId" id="24WGyRK13dVkyzTZfwqhZ3Frmgh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -71,13 +91,24 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Helper/Format.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="10" />
+          <url>file://$PROJECT_DIR$/src/main/java/Player/Attributes.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

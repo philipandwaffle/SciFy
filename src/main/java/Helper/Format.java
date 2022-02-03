@@ -25,6 +25,11 @@ public class Format {
         }
         return res;
     }
+    public static String[] toStringArray(int[] array){
+        return Arrays.stream(array)
+                .mapToObj(String::valueOf)
+                .toArray(String[]::new);
+    }
 
     public static String toDisplayTable(List<String[]> data){
         String res = "";
@@ -35,8 +40,12 @@ public class Format {
             max = curMax > max ? curMax : max;
         }
 
-        int finalMax = max;
-
+        for (int i = 0; i < data.size(); i++) {
+            for (int j = 0; j < data.get(0).length; j++) {
+                res += padtext(data.get(i)[j], max + 1);
+            }
+            res += "\n";
+        }
 
         return res;
     }

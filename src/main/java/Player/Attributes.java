@@ -1,9 +1,12 @@
 package Player;
 
+import Helper.Format;
+
 import java.util.Arrays;
+import java.util.List;
 
 public class Attributes {
-    protected enum attribute{
+    public enum attribute{
         strength,
         dexterity,
         constitution,
@@ -17,9 +20,9 @@ public class Attributes {
             return value;
         }
     }
-    protected int[] attrubutes;
-    public int[] getAttrubutes(){
-        return attrubutes;
+    protected int[] attributes;
+    public int[] getAttributes(){
+        return attributes;
     }
 
     protected int[] modifiers;
@@ -31,19 +34,24 @@ public class Attributes {
         if (attributes.length != attribute.values().length){
             throw new IllegalArgumentException(String.format("There must be {0} attributes given", attribute.values().length));
         }
-        this.attrubutes = attributes;
+        this.attributes = attributes;
         initModifiers();
     }
 
     private void initModifiers(){
-        modifiers = new int[attrubutes.length];
+        modifiers = new int[attributes.length];
         for (attribute a: attribute.values()) {
-            modifiers[a.ordinal()] = Math.floorDiv((attrubutes[a.ordinal()] - 10), 2);
+            modifiers[a.ordinal()] = Math.floorDiv((attributes[a.ordinal()] - 10), 2);
         }
     }
 
     @Override
     public String toString() {
-        return "";
+        String res = "";
+        res += Format.toDisplayTable(Arrays.asList(
+                        Format.toStringArray(attribute.class),
+                        Format.toStringArray(attributes)
+        ));
+        return res;
     }
 }

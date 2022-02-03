@@ -1,8 +1,17 @@
 package Player;
 
 public class Player extends Skills{
-    public Player(int[] attributes) {
-        super(attributes);
+    protected int profBonus;
+    protected int level;
+
+    public Player(int[] attributes, int level, skill[] skillProf) {
+        super(attributes, calcProfBonus(level), skillProf);
+        this.level = level;
+        this.profBonus = calcProfBonus(level);
+    }
+
+    private static int calcProfBonus(int level){
+        return (level / 4) + 2;
     }
 
     @Override
